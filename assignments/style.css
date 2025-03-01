@@ -1,15 +1,19 @@
-nav{
-  padding: 10px;
-  text-align: center;
+nav ul a:hover{
+  opacity: 0.50;
+  box-shadow: 5px 20px 5px rgba(0, 0, 0, 0.90);
 
 }
-.home{background-color: grey;
+nav ul a:active{
+  opacity: 0.32%;
+}
+
+.home{ background-color: grey;
   cursor: pointer;
   color:burlywood;
   height: 30px;
   width: 100px;
   border-width: 1px;
-
+  
 }
 .about{background-color: grey;
   cursor: pointer;
@@ -25,10 +29,10 @@ nav{
   width: 100px;
   border-width: 1px;
 }
+
 body{
   
-  font-family: Arial, sans-serif;
-  margin: 0%;
-  padding:0%;
+  font-family: sans-serif
+
   
 }
