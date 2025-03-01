@@ -4,8 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
+  <nav>
+    <a  href="index.html"><button class="home" >Home</button></a>
+    <a  href="about.html"><button class="about" >About</button></a>
+  </nav>
+  <div class="contact-us">
+    <h2>Contact Us</h2>
+    <form action="submit_form.php" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" required>
+    <br><br>
+    <label for="message">Message</label>
+    <input type="text" required>
+   <br><br>
+   <label for="priority">Priority:</label>
+   <select name="Priority" id="priority">
+    <option value="Low">Low</option>
+   <option value="Medium">Medium</option>
+   <option value="High">High</option>
+
+   </select>
+
+   
+   <button type="submit">submit</button>
+    </form>
+
+  </div>
 </body>
 </html>
