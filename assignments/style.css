@@ -6,19 +6,29 @@ nav{
 .home{background-color: grey;
   cursor: pointer;
   color:burlywood;
-  background-color:;
+  height: 30px;
+  width: 100px;
+  border-width: 1px;
 
 }
 .about{background-color: grey;
   cursor: pointer;
   color:burlywood ;
+  height: 30px;
+  width: 100px;
+  border-width: 1px;
 }
 .contact{cursor: pointer;
   color:burlywood ;
   background-color: grey;
+  height: 30px;
+  width: 100px;
+  border-width: 1px;
 }
 body{
+  
   font-family: Arial, sans-serif;
   margin: 0%;
   padding:0%;
+  
 }
