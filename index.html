@@ -93,6 +93,65 @@
       line-height: 1.6;
     }
 
+    .tech-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80px;
+      cursor: default;
+    }
+
+    .tech-item svg {
+      width: 60px;
+      height: 60px;
+      fill: currentColor;
+      transition: transform 0.3s ease;
+    }
+
+    /* Specific logo colors */
+    .mongodb {
+      color: #47A248;
+    }
+    .nodejs {
+      color: #43853d;
+    }
+    .expressjs {
+      color: #000000;
+    }
+    .docker {
+      color: #2496ED;
+    }
+    .git {
+      color: #F05032;
+    }
+    .postman {
+      color: #FF6C37;
+    }
+    .javascript {
+      color: #F0DB4F;
+    }
+
+    .tech-item svg:hover {
+      transform: scale(1.2);
+    }
+
+    .tech-name {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      text-align: center;
+      user-select: none;
+    }
+
     @media (max-width: 768px) {
       body {
         flex-direction: column;
@@ -111,6 +170,10 @@
 
       nav a button {
         text-align: center;
+      }
+
+      .tech-logos {
+        justify-content: center;
       }
     }
   </style>
@@ -141,7 +204,72 @@
         I'm also deeply interested in cybersecurity. I'm committed to understanding and implementing protection strategies like data encryption, secure authentication, and vulnerability mitigation. I aim to defend against threats like SQL injection, cross-site scripting (XSS), and unauthorized access—ensuring that the applications I build are not only powerful but also secure.
       </p>
     </section>
-  </main>
 
-</body>
-</html>
+    <section>
+      <h2>Technology Stack</h2>
+      <div class="tech-logos" aria-label="Technology logos">
+        
+        <!-- MongoDB -->
+        <div class="tech-item">
+          <svg class="mongodb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-labelledby="mongodbTitle" role="img">
+            <title id="mongodbTitle">MongoDB Logo</title>
+            <path fill="#47A248" d="M32 2C18 10 14 28 14 28s0 10 18 18c18-8 18-18 18-18S46 10 32 2z"/>
+            <path fill="#FFF" d="M32 48c-7-4-10-10-10-10s5 3 10 3 10-3 10-3-3 6-10 10z"/>
+          </svg>
+          <span class="tech-name">MongoDB</span>
+        </div>
+
+        <!-- Node.js -->
+        <div class="tech-item">
+          <svg class="nodejs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 272" fill="none" aria-labelledby="nodejsTitle" role="img">
+            <title id="nodejsTitle">Node.js Logo</title>
+            <path fill="#43853d" d="M128 0l112 64v144l-112 64-112-64V64L128 0z"/>
+            <path fill="#fff" d="M80 200v-60l32 18v24l-32 18zM176 120v32l-24 14v-32l24-14z"/>
+          </svg>
+          <span class="tech-name">Node.js</span>
+        </div>
+
+        <!-- Express.js -->
+        <div class="tech-item">
+          <svg class="expressjs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none" aria-labelledby="expressjsTitle" role="img">
+            <title id="expressjsTitle">Express.js Logo</title>
+            <rect width="180" height="180" fill="#000"/>
+            <path fill="#FFF" d="M40 90h100v20H40v-20z"/>
+          </svg>
+          <span class="tech-name">Express.js</span>
+        </div>
+
+        <!-- Docker -->
+        <div class="tech-item">
+          <svg class="docker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-labelledby="dockerTitle" role="img">
+            <title id="dockerTitle">Docker Logo</title>
+            <path fill="#2496ED" d="M2 42h60v8H2v-8z"/>
+            <path fill="#2496ED" d="M52 34v-6H42v6h10zM36 34v-6H26v6h10zM20 34v-6H10v6h10z"/>
+            <rect x="18" y="26" width="6" height="6" fill="#2496ED"/>
+            <rect x="34" y="26" width="6" height="6" fill="#2496ED"/>
+          </svg>
+          <span class="tech-name">Docker</span>
+        </div>
+
+       <div class="tech-item">
+  <svg class="git" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="gitTitle" role="img">
+    <title id="gitTitle">Git Logo</title>
+    <circle cx="32" cy="32" r="30" fill="#F05032"/>
+    <path fill="#fff" d="M38 16l-12 12 12 12M26 34h10"/>
+    <circle cx="38" cy="16" r="4" fill="#fff"/>
+    <circle cx="26" cy="34" r="4" fill="#fff"/>
+    <circle cx="38" cy="46" r="4" fill="#fff"/>
+  </svg>
+  <span class="tech-name">Git</span>
+</div>
+
+<!-- Complete Postman Logo -->
+<div class="tech-item">
+  <svg class="postman" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="postmanTitle" role="img">
+    <title id="postmanTitle">Postman Logo</title>
+    <path fill="#FF6C37" d="M256 0L12 124v264l244 124 244-124V124L256 0z"/>
+    <path fill="#FFF" d="M256 80v272l144-68-144-204z"/>
+  </svg>
+  <span class="tech-name">Postman</span>
+</div>
+          
