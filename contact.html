@@ -2,53 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Paul Udegbue</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    :root {
+      --bg-dark: #1e1e1e;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+      --text-light: #fff;
+      --accent: burlywood;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #f7f7f7;
-      color: #333;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    aside {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      width: 220px;
+      min-height: 100vh;
       padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    aside h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--accent);
     }
 
     nav {
-      background-color: #333;
-      padding: 10px 20px;
       display: flex;
+      flex-direction: column;
       gap: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
     }
 
     nav a button {
-      background-color: #222;
-      color: burlywood;
-      border: none;
-      padding: 10px 15px;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 10px;
       border-radius: 5px;
+      text-align: left;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      width: 100%;
     }
 
     nav a button:hover {
-      background-color: #444;
+      background: var(--accent);
+      color: var(--bg-dark);
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 40px 20px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 30px;
     }
 
     .contact-us {
-      max-width: 600px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
+      background: #fff;
+      padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .contact-us h2 {
-      margin-top: 0;
-      color: #111;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: var(--bg-dark);
     }
 
     form label {
@@ -64,12 +111,13 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 1rem;
+      background-color: #fdfdfd;
     }
 
     form button {
       margin-top: 20px;
-      background-color: #222;
-      color: burlywood;
+      background-color: var(--bg-dark);
+      color: var(--accent);
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
@@ -81,60 +129,68 @@
       background-color: #444;
     }
 
-    @media (max-width: 600px) {
-      nav {
+    @media (max-width: 768px) {
+      body {
         flex-direction: column;
       }
-      nav a button {
+
+      aside {
+        position: relative;
         width: 100%;
-        margin-bottom: 10px;
+        min-height: auto;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      nav a button {
+        text-align: center;
       }
     }
   </style>
-  <script>
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   const form = document.querySelector('form');
-    //   form.addEventListener('submit', (e) => {
-    //     e.preventDefault();
-    //     const name = document.getElementById('name').value;
-    //     const email = document.getElementById('email').value;
-    //     const message = document.getElementById('message').value;
-    //     const priority = document.getElementById('priority').value;
-
-    //     alert(`Thank you, ${name}! Your message has been received.\nPriority: ${priority}`);
-    //     form.reset();
-    //   });
-    // });
-  </script>
 </head>
 <body>
-  <nav>
-    <a href="index.html"><button class="home">Home</button></a>
-    <a href="about.html"><button class="about">About</button></a>
-    <a href="projects.html"><button class="project">Projects</button></a>
-  </nav>
 
-  <div class="contact-us">
-    <h2>Contact Us</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
+  <aside>
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html"><button>Home</button></a>
+      <a href="about.html"><button>About</button></a>
+      <a href="projects.html"><button>Projects</button></a>
+    </nav>
+  </aside>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+  <main>
+    <header>
+      <h1>Contact</h1>
+      <p>Let's connect — drop your message and I'll get back to you!</p>
+    </header>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+    <div class="contact-us">
+      <h2>Contact Form</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-      <label for="priority">Priority</label>
-      <select name="priority" id="priority">
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="priority">Priority</label>
+        <select name="priority" id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
 </body>
 </html>

@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Livia - Paul Udegbue</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Paul Udegbue | Portfolio</title>
   <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+      --text-light: #fff;
+      --accent: burlywood;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,124 +20,128 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #222, #555);
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background: var(--bg-light);
+      color: var(--text-dark);
     }
 
-    header {
-      background: linear-gradient(to right, #222, #555);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+    aside {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      width: 220px;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+    aside h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--accent);
     }
 
     nav {
       display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 20px 0;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    nav a {
-      text-decoration: none;
-    }
-
-    nav button {
-      background-color: #444;
-      color: burlywood;
-      border: none;
-      padding: 10px 15px;
+    nav a button {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 10px;
       border-radius: 5px;
+      text-align: left;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
+      width: 100%;
     }
 
-    nav button:hover {
-      background-color: #666;
+    nav a button:hover {
+      background: var(--accent);
+      color: var(--bg-dark);
     }
 
-    .projects {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    main {
+      margin-left: 240px;
+      padding: 40px 20px;
+      max-width: 900px;
     }
 
-    .projects h2 {
-      margin-bottom: 20px;
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--bg-dark);
     }
 
-    .project {
-      margin-bottom: 20px;
+    header p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+      color: #555;
     }
 
-    .project a {
-      color: #0066cc;
-      text-decoration: none;
+    section {
+      margin-top: 30px;
     }
 
-    .project a:hover {
-      text-decoration: underline;
+    section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav {
+    @media (max-width: 768px) {
+      body {
         flex-direction: column;
       }
 
-      nav button {
+      aside {
+        position: relative;
         width: 100%;
+        min-height: auto;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      nav a button {
+        text-align: center;
       }
     }
   </style>
-  <script>
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   const buttons = document.querySelectorAll('nav button');
-    //   buttons.forEach(btn => {
-    //     btn.addEventListener('click', () => {
-    //       alert(`Navigating to ${btn.textContent} page!`);
-    //     });
-    //   });
-    // });
-  </script>
 </head>
 <body>
-  <header>
+
+  <aside>
+    <h2>Menu</h2>
     <nav>
-      
-      <a href="about.html"><button class="about">About</button></a>
-      <a href="contact.html"><button class="contact">Contact</button></a>
-      <a href="projects.html"><button class="contact">Projects</button><a>
+      <a href="about.html"><button>About</button></a>
+      <a href="projects.html"><button>Projects</button></a>
+      <a href="contact.html"><button>Contact</button></a>
     </nav>
-    <h1>Paul Udegbue</h1>
-<p>
-  <strong>Cybersecurity Enthusiast</strong> | <strong>Backend Engineer</strong><br>
-  <em>Marathoner | Boxer | Hybrid Athlete</em>
-</p>
+  </aside>
 
-<p>
-  I'm passionate about building secure, scalable backend systems and continuously pushing my limits—both technically and physically. As I grow in backend development, my goal is to master server-side programming, databases, APIs, and secure authentication techniques.
-</p>
+  <main>
+    <header>
+      <h1>Paul Udegbue</h1>
+      <p><strong>Cybersecurity Enthusiast</strong> | <strong>Backend Engineer</strong></p>
+      <p><em>Marathoner | Boxer | Hybrid Athlete</em></p>
+    </header>
 
-<p>
-  I'm also deeply interested in cybersecurity. I'm committed to understanding and implementing protection strategies like data encryption, secure authentication, and vulnerability mitigation. I aim to defend against threats like SQL injection, cross-site scripting (XSS), and unauthorized access—ensuring that the applications I build are not only powerful but also secure.
-</p>
-  </header>
+    <section>
+      <p>
+        I'm passionate about building secure, scalable backend systems and continuously pushing my limits—both technically and physically. As I grow in backend development, my goal is to master server-side programming, databases, APIs, and secure authentication techniques.
+      </p>
+      <p>
+        I'm also deeply interested in cybersecurity. I'm committed to understanding and implementing protection strategies like data encryption, secure authentication, and vulnerability mitigation. I aim to defend against threats like SQL injection, cross-site scripting (XSS), and unauthorized access—ensuring that the applications I build are not only powerful but also secure.
+      </p>
+    </section>
+  </main>
+
 </body>
 </html>

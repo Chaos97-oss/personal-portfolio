@@ -2,102 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paul Udegbue Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Paul Udegbue</title>
   <style>
     :root {
-      --main-bg: #f7f7f7;
-      --accent: #444;
-      --highlight: burlywood;
-      --button-bg: #333;
-      --button-hover: #555;
+      --bg-dark: #1e1e1e;
+      --bg-light: #f7f7f7;
+      --text-dark: #333;
+      --text-light: #fff;
+      --accent: burlywood;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
+      display: flex;
+      min-height: 100vh;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       background: #333;
-      color: #333;
-      color: white;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    aside {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      width: 220px;
       padding: 20px;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
+
+    aside h2 {
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
 
     nav {
-      background-color: var(--accent);
-      padding: 10px 20px;
       display: flex;
-      justify-content: flex-start;
+      flex-direction: column;
       gap: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
     }
 
     nav a button {
-      background-color: var(--button-bg);
-      color: var(--highlight);
-      border: none;
-      padding: 10px 15px;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 10px;
+      border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s ease;
-      border-radius: 5px;
+      text-align: left;
+      width: 100%;
     }
 
     nav a button:hover {
-      background-color: var(--button-hover);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      background: var(--accent);
+      color: var(--bg-dark);
     }
 
     main {
+      margin-left: 240px;
+      padding: 40px 20px;
       max-width: 800px;
-      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
     p, li {
+      font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     h2 {
-      margin-top: 20px;
-      color: var(--accent);
+      margin-top: 30px;
+      color: var(--bg-dark);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
     }
 
     ul {
+      list-style-type: disc;
       margin-left: 20px;
     }
 
-    @media (max-width: 600px) {
-      nav {
+    @media (max-width: 768px) {
+      body {
         flex-direction: column;
-        align-items: flex-start;
+      }
+
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
       }
 
       nav a button {
-        width: 100%;
-        margin-bottom: 10px;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html"><button class="home">Home</button></a>
-    <a href="contact.html"><button class="contact">Contact</button></a>
-    <a href="projects.html"><button class="contact">Projects</button><a></a>
-  </nav>
+
+  <aside>
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html"><button>Home</button></a>
+      <a href="projects.html"><button>Projects</button></a>
+      <a href="contact.html"><button>Contact</button></a>
+    </nav>
+  </aside>
 
   <main>
+    <h1>About Me</h1>
     <p>
-      Passionate about cybersecurity and backend engineering, I am an endurance-driven individual who thrives on pushing physical and mental limits. As a marathoner, boxer, and hybrid athlete, I embrace discipline, resilience, and continuous improvement—qualities that also shape my approach to technology and problem-solving. With a strong interest in securing digital systems and building efficient backend architectures, I am committed to merging technical expertise with endurance-driven determination to excel in both fields.
+      Passionate about cybersecurity and backend engineering, I am an endurance-driven individual who thrives on pushing physical and mental limits. As a marathoner, boxer, and hybrid athlete, I embrace discipline, resilience, and continuous improvement—qualities that also shape my approach to technology and problem-solving.
+    </p>
+    <p>
+      With a strong interest in securing digital systems and building efficient backend architectures, I am committed to merging technical expertise with endurance-driven determination to excel in both fields.
     </p>
 
-    <h2>Job Experience:</h2>
+    <h2>Job Experience</h2>
     <ul>
       <li>2013 - 2014: Teacher at Fanul School</li>
       <li>May 2016 - Aug 2016: Assistant Lab Technician at PHC Isheri</li>
@@ -106,8 +148,8 @@
       <li>Dec 2021 - Jan 2023: Manager of Human Resources (HR) at Cudi Intl Hotels</li>
     </ul>
 
-    <h2>Hobbies:</h2>
-    <p>Running, swimming, reading, combat sports, challenging activities</p>
+    <h2>Hobbies</h2>
+    <p>Running, swimming, reading, combat sports, challenging activities.</p>
   </main>
 
 </body>
