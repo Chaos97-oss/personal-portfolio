@@ -136,6 +136,37 @@
         text-align: center;
       }
     }
+    .glow-doc-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.glow-doc-link:hover,
+.glow-doc-link:focus {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+.glow-doc-link:active {
+  transform: scale(0.98);
+}
+.underline-center::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.underline-center:hover::after {
+  width: 100%;
+}
   </style>
 </head>
 <body>
@@ -161,8 +192,7 @@
         <p>
           An e-commerce API for managing products, users, and orders with secure routes and admin control.
         </p>
-        <a href="https://documenter.getpostman.com/view/43208616/2sB2jAa7rB" target="_blank">View Postman Docs</a>
-      </div>
+        <a href="https://documenter.getpostman.com/view/43208616/2sB2jAa7rB" target="_blank" class="glow-doc-link">View Postman Docs</a>
 
       <div class="project">
         <h3>Project Achan - Booking System API</h3>
