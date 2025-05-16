@@ -6,64 +6,96 @@
   <title>Livia - Paul Udegbue</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #f7f7f7;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #222, #555);
       color: #333;
-      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, #222, #555);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
 
     nav {
-      background-color: #333;
-      padding: 10px 20px;
       display: flex;
-      gap: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
     }
 
-    nav a button {
-      background-color: #222;
+    nav a {
+      text-decoration: none;
+    }
+
+    nav button {
+      background-color: #444;
       color: burlywood;
       border: none;
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
-    nav a button:hover {
-      background-color: #444;
+    nav button:hover {
+      background-color: #666;
     }
 
-    header {
-      max-width: 900px;
-      margin: auto;
+    .projects {
+      max-width: 800px;
+      margin: 30px auto;
       padding: 20px;
-      background-color: white;
+      background: white;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #111;
+    .projects h2 {
+      margin-bottom: 20px;
     }
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 15px;
+    .project {
+      margin-bottom: 20px;
+    }
+
+    .project a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
       nav {
         flex-direction: column;
       }
-      nav a button {
+
+      nav button {
         width: 100%;
-        margin-bottom: 10px;
       }
     }
   </style>
@@ -81,14 +113,15 @@
 <body>
   <header>
     <nav>
-      <a href="index.html"><button class="home">Home</button></a>
+      
       <a href="about.html"><button class="about">About</button></a>
       <a href="contact.html"><button class="contact">Contact</button></a>
+      <a href="projects.html"><button class="contact">Projects</button><a>
     </nav>
     <h1>Paul Udegbue</h1>
 <p>
-  <strong>Cybersecurity Enthusiast</strong> · <strong>Backend Engineer</strong><br>
-  <em>Marathoner · Boxer · Hybrid Athlete</em>
+  <strong>Cybersecurity Enthusiast</strong> | <strong>Backend Engineer</strong><br>
+  <em>Marathoner | Boxer | Hybrid Athlete</em>
 </p>
 
 <p>
