@@ -7,6 +7,7 @@ This is my personal portfolio showcasing my projects, skills, and experience. It
 ## Technologies Used 
 - HTML  
 - CSS 
+- Javascrpit
 ## Challenges Faced
 ### 1. **Responsive Design Issues**  
 **Challenge:** Ensuring the portfolio looked good on different screen sizes was difficult.  
