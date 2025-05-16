@@ -1,43 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Paul Udegbue</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      color: #333;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      gap: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    nav a button {
+      background-color: #222;
+      color: burlywood;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a button:hover {
+      background-color: #444;
+    }
+
+    .contact-us {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-us h2 {
+      margin-top: 0;
+      color: #111;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    form button {
+      margin-top: 20px;
+      background-color: #222;
+      color: burlywood;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #444;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const priority = document.getElementById('priority').value;
+
+        alert(`Thank you, ${name}! Your message has been received.\nPriority: ${priority}`);
+        form.reset();
+      });
+    });
+  </script>
 </head>
 <body>
-  
   <nav>
-   <ul>
-    <a href="index.html"><button class="home" >Home</button></a>
-    <a href="about.html"><button class="about" >About</button></a>
-  </ul>
-</nav>
+    <a href="index.html"><button class="home">Home</button></a>
+    <a href="about.html"><button class="about">About</button></a>
+  </nav>
+
   <div class="contact-us">
     <h2>Contact Us</h2>
-    <form action="submit_form.php" method="post">
+    <form>
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <br><br>
+      <input type="text" id="name" name="name" required />
+
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
-    <br><br>
-    <label for="message">Message</label>
-    <input type="text" required>
-   <br><br>
-   <label for="priority">Priority:</label>
-   <select name="Priority" id="priority">
-    <option value="Low">Low</option>
-   <option value="Medium">Medium</option>
-   <option value="High">High</option>
+      <input type="email" id="email" name="email" required />
 
-   </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
-   
-   <button type="submit">submit</button>
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <button type="submit">Submit</button>
     </form>
-
   </div>
 </body>
 </html>

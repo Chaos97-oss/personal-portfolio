@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul Udegbue - Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #222, #555);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav button {
+      background-color: #444;
+      color: burlywood;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #666;
+    }
+
+    .projects {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .projects h2 {
+      margin-bottom: 20px;
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    .project a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paul Udegbue</h1>
+    <p>Cybersecurity Enthusiast | Backend Engineer | Endurance Athlete</p>
+  </header>
+
+  <nav>
+    <a href="index.html"><button>Home</button></a>
+    <a href="about.html"><button>About</button></a>
+    <a href="contact.html"><button>Contact</button></a>
+  </nav>
+
+  <div class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project Akello - E-commerce API</h3>
+      <p>An e-commerce API for managing products, users, and orders with secure routes and admin control.</p>
+      <a href="https://dark-comet-528451.postman.co/documentation/43208616-6fd4019a-3192-4ad5-80c0-985b17ce98b2/publish?workspaceId=8ea3bf7c-34f5-4424-8144-4b909edb15db&requestId=" target="_blank">View Postman Docs</a>
+    </div>
+    <div class="project">
+      <h3>Project Achan - Booking system API</h3>
+      <p>A booking system API, Appointment slots & real-time availability, Notifications (email with nodemailer), Admin panel, Calendar integration logic
+    </div>
+    <div class="project">
+      <h3>More Projects Coming Soon...</h3>
+      <p>Stay tuned for more portfolio projects currently in development.</p>
+    </div>
+  </div>
+</body>
+</html>

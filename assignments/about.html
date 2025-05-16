@@ -1,38 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul Udegbue Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --main-bg: #f7f7f7;
+      --accent: #444;
+      --highlight: burlywood;
+      --button-bg: #333;
+      --button-hover: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--main-bg);
+      color: #222;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: var(--accent);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    nav a button {
+      background-color: var(--button-bg);
+      color: var(--highlight);
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a button:hover {
+      background-color: var(--button-hover);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    p, li {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: var(--accent);
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <ul>
-    <a  href="index.html"><button class="home" >Home</button></a>
-    <a  href="contact.html"><button class="contact" >Contact</button></a>
-  </ul>
+    <a href="index.html"><button class="home">Home</button></a>
+    <a href="contact.html"><button class="contact">Contact</button></a>
   </nav>
-  <p>Passionate about cybersecurity and backend engineering, I am an 
-     endurance-driven individual who thrives on pushing physical and 
-     mental limits. As a marathoner, boxer, and hybrid athlete, I 
-     embrace discipline, resilience, and continuous improvement qualities
-     that also shape my approach to technology and problem-solving. With 
-     a strong interest in securing digital systems and building efficient
-     backend architectures, I am committed to merging technical expertise
-     with endurance-driven determination to excel in both fields."</p>
-<p>Job Eperience:</p>
-<ul>
-  <li>2013 - 2014: Teacher at Fanul School</li>
-  <li>May 2016 - Aug 2016: Assistant Lab Technician at PHC Isheri</li>
-  <li>Jan 2020 - Dec 2020: Receptionist at Cudi Intl Hotel</li>
-  <li>Jan 2021 - Nov 2021: Assistant to Director of Operations at Cudi International Logistics</li>
-  <li>Dec 2021 - Jan 2023: Manager of Human Resources (HR) at Cudi Intl Hotels</li>
-</ul>
 
-  </ul>
-  <p>Hobbies:</p>
-  <p>Running, swimming, reading, combat sports, challenging activities</p>
+  <main>
+    <p>
+      Passionate about cybersecurity and backend engineering, I am an endurance-driven individual who thrives on pushing physical and mental limits. As a marathoner, boxer, and hybrid athlete, I embrace discipline, resilience, and continuous improvement—qualities that also shape my approach to technology and problem-solving. With a strong interest in securing digital systems and building efficient backend architectures, I am committed to merging technical expertise with endurance-driven determination to excel in both fields.
+    </p>
 
-    </body>
+    <h2>Job Experience:</h2>
+    <ul>
+      <li>2013 - 2014: Teacher at Fanul School</li>
+      <li>May 2016 - Aug 2016: Assistant Lab Technician at PHC Isheri</li>
+      <li>Jan 2020 - Dec 2020: Receptionist at Cudi Intl Hotel</li>
+      <li>Jan 2021 - Nov 2021: Assistant to Director of Operations at Cudi International Logistics</li>
+      <li>Dec 2021 - Jan 2023: Manager of Human Resources (HR) at Cudi Intl Hotels</li>
+    </ul>
+
+    <h2>Hobbies:</h2>
+    <p>Running, swimming, reading, combat sports, challenging activities</p>
+  </main>
+
+</body>
 </html>
